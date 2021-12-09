@@ -47,7 +47,7 @@ rule download_genome_wc:
     message: "Downloading GRCm39/mm10 mouse genome from the UCSC Genome Browser"
     output: "01_raw_data/mm10.chromFa.tar.gz"
     log: "00_logs/download_genome.log"
-    shell: "wget https://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.chromFa.tar.gz -O {output} 2> {log}"
+    shell: "wget https://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz -O {output} 2> {log}"
 
 rule process_genome:
     input: "01_raw_data/mm10.fa"
